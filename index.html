@@ -112,51 +112,6 @@
                 padding: 3.5rem 2rem; /* Further increased padding for desktops */
             }
         }
-        /* Custom button style for LLM features */
-        .llm-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.75rem;
-            font-weight: 600;
-            background-color: #2563eb; /* Blue */
-            color: white;
-            transition: background-color 0.3s ease, transform 0.1s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%; /* Full width on mobile */
-        }
-        @media (min-width: 640px) {
-            .llm-button {
-                width: auto; /* Auto width on larger screens */
-            }
-        }
-        .llm-button:hover {
-            background-color: #1d4ed8; /* Darker blue on hover */
-            transform: translateY(-1px);
-        }
-        .llm-button:active {
-            transform: translateY(0);
-            box-shadow: none;
-        }
-        .llm-button svg {
-            margin-right: 0.5rem;
-        }
-        /* Loading spinner */
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #fff;
-            border-radius: 50%;
-            width: 1.5rem;
-            height: 1.5rem;
-            animation: spin 1s linear infinite;
-            margin-left: 0.5rem;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -171,14 +126,13 @@
 
         <!-- Image 1: Temple - A beautiful opening visual -->
         <div class="section-padding flex justify-center">
-            <img src="https://placehold.co/1200x700/3b82f6/ffffff?text=Latter-day+Saint+Temple" alt="A beautiful Latter-day Saint Temple under a clear sky, surrounded by gardens." class="w-full">
+            <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/temple.jpg" alt="A beautiful Latter-day Saint Temple under a clear sky, surrounded by gardens." class="w-full">
         </div>
 
         <!-- Questions Section: Encouraging initial reflection -->
         <section class="section-padding border-b border-gray-200">
             <h3 class="text-3xl">Questions?</h3>
             <p class="text-base md:text-lg text-gray-700">As we delve into this important topic, feel free to pause and ponder any questions that come to mind. This is a space for personal reflection and growth.</p>
-            <!-- QR code image (Image 2) is intentionally omitted as it's not core content for a scrollable lesson. -->
         </section>
 
         <!-- Objective Section: Setting the purpose of the lesson -->
@@ -196,7 +150,7 @@
             <h3 class="text-3xl">An Apostle with a Recommend</h3>
             <div class="flex flex-col md:flex-row items-start md:space-x-10">
                 <div class="md:w-1/2">
-                    <img src="https://placehold.co/700x500/3b82f6/ffffff?text=Temple+Recommend+Card" alt="A close-up image of a Temple Recommend card." class="mb-6 md:mb-0">
+                    <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/temple_recommend_card.jpg" alt="A close-up image of a Temple Recommend card." class="mb-6 md:mb-0">
                 </div>
                 <div class="md:w-1/2 text-gray-700 text-base md:text-lg">
                     <p class="mb-4">Here is a photo of my temple recommend. For those who are unfamiliar with The Church of Jesus Christ of Latter-day Saints, a temple recommend allows the owner to enter any of our 168 temples around the globe. This small piece of paper means everything to me. It reflects my deep, spiritual intent to live the laws of the Lord and love what He loves: humility, meekness, steadfastness, charity, courage, compassion, forgiveness, and obedience.</p>
@@ -211,7 +165,7 @@
 
         <!-- Elder Rasband Image: A supportive visual -->
         <div class="section-padding flex justify-center">
-            <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Elder+Ronald+A.+Rasband+Holding+Temple+Recommend" alt="Elder Ronald A. Rasband smiling and holding up a temple recommend." class="w-full">
+            <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/elder_rasband.jpg" alt="Elder Ronald A. Rasband smiling and holding up a temple recommend." class="w-full">
         </div>
 
         <!-- Temple Recommend Interview Questions Section: The core questions for worthiness -->
@@ -236,7 +190,6 @@
                 <li>Do you consider yourself worthy to enter the Lord’s house and participate in temple ordinances?</li>
             </ul>
             <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What questions do you have about these questions?</p>
-            <!-- QR code image (Image 5) is intentionally omitted. -->
         </section>
 
         <!-- The Law of Chastity Section: Defining a key principle -->
@@ -248,14 +201,14 @@
 
         <!-- Image 6: Best Friends Forever - Temple wedding: Visualizing eternal commitment -->
         <div class="section-padding flex justify-center">
-            <img src="https://placehold.co/1000x1200/3b82f6/ffffff?text=Couple+Married+at+Temple" alt="A joyful couple in wedding attire standing outside a beautiful Latter-day Saint temple." class="w-full">
+            <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/couple_temple_wedding.jpg" alt="A joyful couple in wedding attire standing outside a beautiful Latter-day Saint temple." class="w-full">
         </div>
 
         <!-- Confidence wax strong in the presence of the Lord Section: The blessings of virtue -->
         <section class="section-padding border-b border-gray-200">
             <h3 class="text-3xl">Confidence Wax Strong in the Presence of the Lord</h3>
             <div class="flex justify-center mb-8">
-                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Couple+Looking+Up+with+Divine+Light" alt="A man and woman looking heavenward with expressions of joy and confidence, bathed in golden light." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/couple_divine_light.jpg" alt="A man and woman looking heavenward with expressions of joy and confidence, bathed in golden light." class="w-full">
             </div>
             <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Doctrine and Covenants 121:</h4>
             <p class="mb-4 text-base md:text-lg text-gray-700">45 Let thy bowels also be full of charity towards all men, and to the household of faith, and let virtue garnish thy thoughts unceasingly; then shall thy confidence wax strong in the presence of God; and the doctrine of the priesthood shall distil upon thy soul as the dews from heaven.</p>
@@ -275,14 +228,14 @@
 
         <!-- President Nelson Image: A respected leader's portrait -->
         <div class="section-padding flex justify-center">
-            <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=President+Russell+M.+Nelson+Portrait" alt="A smiling portrait of President Russell M. Nelson." class="w-full">
+            <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/president_nelson.jpg" alt="A smiling portrait of President Russell M. Nelson." class="w-full">
         </div>
 
         <!-- Tithing Section: Understanding the law of tithing -->
         <section class="section-padding border-b border-gray-200">
             <h3 class="text-3xl">Tithing</h3>
             <div class="flex justify-center mb-8">
-                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Person+Writing+Tithing+Slip" alt="A person's hands filling out a tithing and offerings slip." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/tithing_slip.jpg" alt="A person's hands filling out a tithing and offerings slip." class="w-full">
             </div>
             <blockquote class="text-gray-800">
                 <p>“Tithing is a principle that is fundamental to the personal happiness and well-being of the Church members worldwide, both rich and poor. Tithing is a principle of sacrifice and a key to the opening of the windows of heaven. … Members of the Church who do not tithe do not lose their membership; they only lose blessings.”</p>
@@ -306,7 +259,7 @@
             </blockquote>
             <footer class="text-sm mt-2 text-gray-600">—The Law of Sacrifice by Elder M Russell Ballard</footer>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/600x750/3b82f6/ffffff?text=Elder+M+Russell+Ballard+Portrait" alt="A portrait of Elder M Russell Ballard." class="w-full md:w-1/2 lg:w-1/3">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/elder_ballard.jpg" alt="A portrait of Elder M Russell Ballard." class="w-full md:w-1/2 lg:w-1/3">
             </div>
         </section>
 
@@ -321,7 +274,7 @@
             </ul>
             <footer class="text-sm mt-2 text-gray-600">—D&C 89</footer>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/1000x560/3b82f6/ffffff?text=Word+of+Wisdom+Visual+Summary" alt="A graphic illustrating items prohibited by the Word of Wisdom, such as alcohol, tobacco, coffee, and drugs." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/word_of_wisdom_visual.jpg" alt="A graphic illustrating items prohibited by the Word of Wisdom, such as alcohol, tobacco, coffee, and drugs." class="w-full">
             </div>
 
             <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">Historical Background</h4>
@@ -330,7 +283,7 @@
                 <footer>—In <em>Journal of Discourses</em>, 12:158</footer>
             </blockquote>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/800x500/3b82f6/ffffff?text=Joseph+Smith+and+Emma+Smith+Cleaning" alt="An illustration depicting Prophet Joseph Smith observing Emma Smith cleaning a floor, leading to the revelation of the Word of Wisdom." class="w-full md:w-2/3">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/joseph_emma_cleaning.jpg" alt="An illustration depicting Prophet Joseph Smith observing Emma Smith cleaning a floor, leading to the revelation of the Word of Wisdom." class="w-full md:w-2/3">
             </div>
 
             <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">Why Does the Lord Say “Not by Commandment or Constraint”?</h4>
@@ -346,7 +299,7 @@
             <p class="mb-2 text-base md:text-lg text-gray-700">20 And shall run and not be weary, and shall walk and not faint.</p>
             <p class="mb-4 text-base md:text-lg text-gray-700">21 And I, the Lord, give unto them a promise, that the destroying angel shall pass by them, as the children of Israel, and not slay them. Amen.</p>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/800x1000/3b82f6/ffffff?text=Runners+Symbolizing+Health" alt="A man and a woman jogging outdoors, symbolizing the physical blessings of the Word of Wisdom." class="w-full md:w-2/3 lg:w-1/2">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/runners_health.jpg" alt="A man and a woman jogging outdoors, symbolizing the physical blessings of the Word of Wisdom." class="w-full md:w-2/3 lg:w-1/2">
             </div>
         </section>
 
@@ -361,7 +314,7 @@
             <p class="mb-2 text-base md:text-lg text-gray-700">12 But remember that on this, the Lord’s day, thou shalt offer thine oblations and thy sacraments unto the Most High, confessing thy sins unto thy brethren, and before the Lord.</p>
             <p class="mb-4 text-base md:text-lg text-gray-700">13 And on this day thou shalt do none other thing, only let thy food be prepared with singleness of heart that thy fasting may be perfect, or, in other words, that thy joy may be full.</p>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+and+Samaritan+Woman+at+Well" alt="Jesus Christ speaking with the Samaritan woman at Jacob's Well." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_samaritan_woman.jpg" alt="Jesus Christ speaking with the Samaritan woman at Jacob's Well." class="w-full">
             </div>
 
             <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">List of Do’s and Don’ts?</h4>
@@ -371,24 +324,9 @@
                 <footer>—President Nelson, <em>The Sabbath is a Delight</em></footer>
             </blockquote>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+Teaching+an+Elderly+Man" alt="Jesus Christ sitting and teaching an elderly man." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_teaching_elderly_man.jpg" alt="Jesus Christ sitting and teaching an elderly man." class="w-full">
             </div>
             <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What can you do to make the Sabbath more of a delight?</p>
-
-            <!-- LLM Feature: Sabbath Delight Ideas -->
-            <div class="mt-8 p-6 bg-blue-50 rounded-lg shadow-inner">
-                <h4 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">✨ Get Sabbath Delight Ideas ✨</h4>
-                <p class="text-base md:text-lg text-gray-700 mb-4">Describe your current Sabbath activities or preferences, and I'll suggest ways to make it more delightful for you and your family.</p>
-                <textarea id="sabbathInput" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" rows="4" placeholder="E.g., 'I enjoy quiet reflection and reading scriptures, but my kids get bored.' or 'I want to feel more spiritually uplifted.'"></textarea>
-                <button id="generateSabbathIdeasBtn" class="llm-button mt-4">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path></svg>
-                    Generate Ideas
-                    <span id="sabbathSpinner" class="spinner hidden"></span>
-                </button>
-                <div id="sabbathOutput" class="mt-6 p-4 bg-white border border-blue-200 rounded-lg text-gray-800 text-base">
-                    Your personalized Sabbath delight ideas will appear here.
-                </div>
-            </div>
         </section>
 
         <!-- Reflection Section: A call to personal introspection -->
@@ -399,25 +337,10 @@
             <p class="mb-2 text-base md:text-lg text-gray-700">4 He that hath clean hands, and a pure heart; who hath not lifted up his soul unto vanity, nor sworn deceitfully.</p>
             <p class="mb-4 text-base md:text-lg text-gray-700">5 He shall receive the blessing from the Lord, and righteousness from the God of his salvation.</p>
             <div class="flex justify-center mt-8">
-                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+Walking+on+Water+Reflection" alt="Jesus Christ walking on the surface of the water, looking down in contemplation." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_walking_on_water.jpg" alt="Jesus Christ walking on the surface of the water, looking down in contemplation." class="w-full">
             </div>
             <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What does it mean to you to be worthy to enter the temple?</p>
             <p class="text-lg md:text-xl font-semibold text-gray-800">What blessing can you expect as you strive to live worthy of a temple recommend?</p>
-
-            <!-- LLM Feature: Temple Worthiness Reflection -->
-            <div class="mt-8 p-6 bg-indigo-50 rounded-lg shadow-inner">
-                <h4 class="text-xl md:text-2xl font-bold text-indigo-800 mb-4">✨ Reflect with Gemini ✨</h4>
-                <p class="text-base md:text-lg text-gray-700 mb-4">Share your thoughts on what it means to be worthy to enter the temple, and I'll offer an encouraging reflection.</p>
-                <textarea id="worthinessInput" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base" rows="6" placeholder="E.g., 'For me, worthiness means striving to live righteously and always trying to repent.' or 'I feel it's about my heart and intentions.'"></textarea>
-                <button id="generateWorthinessReflectionBtn" class="llm-button mt-4 bg-indigo-600 hover:bg-indigo-700">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path></svg>
-                    Get Reflection
-                    <span id="worthinessSpinner" class="spinner hidden"></span>
-                </button>
-                <div id="worthinessOutput" class="mt-6 p-4 bg-white border border-indigo-200 rounded-lg text-gray-800 text-base">
-                    Your personalized reflection will appear here.
-                </div>
-            </div>
         </section>
 
         <!-- Q&A Section: Inviting further questions -->
@@ -425,7 +348,6 @@
             <h3 class="text-3xl">Q&A</h3>
             <p class="mb-2 text-lg md:text-xl font-semibold text-gray-800">What questions do you have about preparing to enter the temple?</p>
             <p class="text-lg md:text-xl font-semibold text-gray-800">(Not a confession time)</p>
-            <!-- Images 17 and 18 (QR code and abstract brush strokes) are omitted. -->
         </section>
 
         <!-- Your Repentance Doesn’t Burden Jesus Christ; It Brightens His Joy Section: A message of hope -->
@@ -437,77 +359,12 @@
             <p class="mb-4 text-base md:text-lg text-gray-700">Your worth isn’t tied to obedience. Your worth is constant; it never changes. It was given to you by God, and there’s nothing you or anyone else can do to change it. Obedience brings blessings; that is true. But worth isn’t one of them. Your worth is always “great in the sight of God,” no matter where your decisions have taken you.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Man+1" alt="Jesus Christ gently comforting a man, embracing him with compassion." class="w-full">
-                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Woman" alt="Jesus Christ tenderly comforting a woman, holding her close." class="w-full">
-                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Man+2" alt="Jesus Christ kneeling to comfort another man, offering solace." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_comforting_man_1.jpg" alt="Jesus Christ gently comforting a man, embracing him with compassion." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_comforting_woman.jpg" alt="Jesus Christ tenderly comforting a woman, holding her close." class="w-full">
+                <img src="https://raw.githubusercontent.com/TomGDaw/TemplePrep/main/images/jesus_comforting_man_2.jpg" alt="Jesus Christ kneeling to comfort another man, offering solace." class="w-full">
             </div>
         </section>
 
     </div>
-
-    <script>
-        // Function to call the Gemini API
-        async function callGeminiAPI(prompt, outputElementId, spinnerElementId) {
-            const outputDiv = document.getElementById(outputElementId);
-            const spinner = document.getElementById(spinnerElementId);
-
-            outputDiv.innerHTML = ''; // Clear previous output
-            spinner.classList.remove('hidden'); // Show spinner
-
-            let chatHistory = [];
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-            const payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will automatically provide the API key at runtime
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    outputDiv.innerHTML = text.replace(/\n/g, '<br>'); // Display response, convert newlines to <br>
-                } else {
-                    outputDiv.innerHTML = 'Sorry, I could not generate a response. Please try again.';
-                    console.error('Gemini API response structure unexpected:', result);
-                }
-            } catch (error) {
-                outputDiv.innerHTML = 'An error occurred while connecting to the API. Please try again later.';
-                console.error('Error calling Gemini API:', error);
-            } finally {
-                spinner.classList.add('hidden'); // Hide spinner
-            }
-        }
-
-        // Event Listener for Sabbath Delight Ideas button
-        document.getElementById('generateSabbathIdeasBtn').addEventListener('click', () => {
-            const sabbathInput = document.getElementById('sabbathInput').value;
-            if (sabbathInput.trim() === '') {
-                document.getElementById('sabbathOutput').innerHTML = 'Please describe your Sabbath activities or preferences to get ideas.';
-                return;
-            }
-            const prompt = `Given the user's preferences: "${sabbathInput}", suggest 3-5 specific, uplifting, and appropriate activities or approaches to make the Sabbath day more of a delight, aligning with principles of rest, worship, and spiritual renewal. Focus on practical, family-friendly, or personal enrichment ideas.`;
-            callGeminiAPI(prompt, 'sabbathOutput', 'sabbathSpinner');
-        });
-
-        // Event Listener for Temple Worthiness Reflection button
-        document.getElementById('generateWorthinessReflectionBtn').addEventListener('click', () => {
-            const worthinessInput = document.getElementById('worthinessInput').value;
-            if (worthinessInput.trim() === '') {
-                document.getElementById('worthinessOutput').innerHTML = 'Please share your thoughts on worthiness to receive a reflection.';
-                return;
-            }
-            const prompt = `The user has shared their thoughts on temple worthiness: "${worthinessInput}". Provide an encouraging and uplifting reflection (2-3 sentences) that acknowledges their effort and reinforces the divine perspective on worthiness, emphasizing growth and God's love.`;
-            callGeminiAPI(prompt, 'worthinessOutput', 'worthinessSpinner');
-        });
-    </script>
 </body>
 </html>
