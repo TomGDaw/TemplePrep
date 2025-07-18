@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Prep Lesson 2: We Must Be Worthy to Enter the Temple</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* A very light, calming blue-gray background */
+            color: #334155; /* Dark slate for primary text, good contrast */
+            line-height: 1.7; /* Increased line height for better readability on all devices */
+            font-size: 16px; /* Base font size for mobile, will scale with rem units */
+        }
+        /* Styling for main headings (h1, h2) */
+        h1 {
+            font-weight: 800; /* Extra bold for main titles */
+            color: #1e293b; /* Darker blue-gray for strong emphasis */
+            font-size: 2.5rem; /* Default for mobile, approx 40px */
+        }
+        h2 {
+            font-weight: 800; /* Extra bold for main titles */
+            color: #1e293b;
+            font-size: 1.75rem; /* Default for mobile, approx 28px */
+        }
+        /* Styling for section headings (h3) */
+        h3 {
+            font-weight: 700; /* Bold for section titles */
+            color: #1e293b;
+            border-bottom: 2px solid #cbd5e1; /* Subtle underline for sections */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem; /* Default for mobile, approx 24px */
+        }
+        /* Styling for sub-headings (h4, h5) */
+        h4, h5 {
+            font-weight: 600; /* Semi-bold for sub-headings */
+            color: #334155;
+            font-size: 1.25rem; /* Default for mobile, approx 20px */
+        }
+        /* Styling for blockquotes to make them stand out */
+        blockquote {
+            background-color: #e0f2fe; /* Light blue background for quotes */
+            border-left: 6px solid #2563eb; /* Stronger blue border */
+            padding: 1.5rem;
+            margin: 2rem 0; /* More vertical space around quotes */
+            color: #1f2937; /* Darker text for quotes */
+            font-style: italic;
+            border-radius: 0.75rem; /* Rounded corners for quote blocks */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+            font-size: 1rem; /* Base font size for quotes on mobile */
+        }
+        /* Styling for quote footers */
+        blockquote footer {
+            text-align: right;
+            margin-top: 1rem;
+            font-size: 0.8rem; /* Smaller font for mobile quote footers */
+            color: #475569;
+        }
+        /* General image styling for consistent look */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem; /* More rounded corners for images */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow for images */
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: block; /* Ensures images take up full width and respect margins */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Styling for lists */
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem; /* Base font size for lists on mobile */
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+        /* Responsive padding for sections - starts smaller on mobile */
+        .section-padding {
+            padding: 1.5rem 1rem; /* Default padding for mobile */
+        }
+        /* Medium screens (tablets) */
+        @media (min-width: 640px) {
+            h1 { font-size: 3rem; } /* Scale up h1 for tablets */
+            h2 { font-size: 2rem; } /* Scale up h2 for tablets */
+            h3 { font-size: 1.75rem; } /* Scale up h3 for tablets */
+            h4, h5 { font-size: 1.375rem; } /* Scale up h4, h5 for tablets */
+            blockquote { font-size: 1.1rem; } /* Scale up quotes for tablets */
+            blockquote footer { font-size: 0.9rem; } /* Scale up quote footers for tablets */
+            ul { font-size: 1.1rem; } /* Scale up lists for tablets */
+            .section-padding {
+                padding: 2.5rem 1.5rem; /* Increased padding for tablets */
+            }
+        }
+        /* Large screens (desktops) */
+        @media (min-width: 1024px) {
+            h1 { font-size: 3.5rem; } /* Scale up h1 for desktops */
+            h2 { font-size: 2.25rem; } /* Scale up h2 for desktops */
+            h3 { font-size: 2rem; } /* Scale up h3 for desktops */
+            h4, h5 { font-size: 1.5rem; } /* Scale up h4, h5 for desktops */
+            blockquote { font-size: 1.2rem; } /* Scale up quotes for desktops */
+            blockquote footer { font-size: 1rem; } /* Scale up quote footers for desktops */
+            ul { font-size: 1.2rem; } /* Scale up lists for desktops */
+            .section-padding {
+                padding: 3.5rem 2rem; /* Further increased padding for desktops */
+            }
+        }
+        /* Custom button style for LLM features */
+        .llm-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            background-color: #2563eb; /* Blue */
+            color: white;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Full width on mobile */
+        }
+        @media (min-width: 640px) {
+            .llm-button {
+                width: auto; /* Auto width on larger screens */
+            }
+        }
+        .llm-button:hover {
+            background-color: #1d4ed8; /* Darker blue on hover */
+            transform: translateY(-1px);
+        }
+        .llm-button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+        .llm-button svg {
+            margin-right: 0.5rem;
+        }
+        /* Loading spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+            animation: spin 1s linear infinite;
+            margin-left: 0.5rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden my-6 md:my-10">
+
+        <!-- Header Section: Prominent title with a subtle gradient -->
+        <header class="bg-gradient-to-br from-blue-700 to-indigo-600 text-white text-center py-8 md:py-10 rounded-t-xl">
+            <h1 class="font-extrabold mb-2 md:mb-3 tracking-tight">Temple Prep</h1>
+            <h2 class="font-semibold opacity-90">We Must Be Worthy to Enter the Temple</h2>
+            <p class="mt-3 md:mt-4 text-base md:text-lg opacity-80 px-4">A journey into understanding temple worthiness and its blessings.</p>
+        </header>
+
+        <!-- Image 1: Temple - A beautiful opening visual -->
+        <div class="section-padding flex justify-center">
+            <img src="https://placehold.co/1200x700/3b82f6/ffffff?text=Latter-day+Saint+Temple" alt="A beautiful Latter-day Saint Temple under a clear sky, surrounded by gardens." class="w-full">
+        </div>
+
+        <!-- Questions Section: Encouraging initial reflection -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Questions?</h3>
+            <p class="text-base md:text-lg text-gray-700">As we delve into this important topic, feel free to pause and ponder any questions that come to mind. This is a space for personal reflection and growth.</p>
+            <!-- QR code image (Image 2) is intentionally omitted as it's not core content for a scrollable lesson. -->
+        </section>
+
+        <!-- Objective Section: Setting the purpose of the lesson -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Objective</h3>
+            <blockquote class="text-gray-800">
+                <p>“It would be the deepest desire of my heart to have every member of the Church be temple worthy. I would hope that every adult member would be worthy of—and carry—a current temple recommend.”</p>
+                <footer>—President Howard W. Hunter, <em>Endowed from on High Lesson 2</em></footer>
+            </blockquote>
+            <p class="text-base md:text-lg text-gray-700 mt-4">President Hunter's heartfelt desire sets the stage for our discussion on the profound importance of temple worthiness.</p>
+        </section>
+
+        <!-- An Apostle with a Recommend Section: Personal testimony and insights -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">An Apostle with a Recommend</h3>
+            <div class="flex flex-col md:flex-row items-start md:space-x-10">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/700x500/3b82f6/ffffff?text=Temple+Recommend+Card" alt="A close-up image of a Temple Recommend card." class="mb-6 md:mb-0">
+                </div>
+                <div class="md:w-1/2 text-gray-700 text-base md:text-lg">
+                    <p class="mb-4">Here is a photo of my temple recommend. For those who are unfamiliar with The Church of Jesus Christ of Latter-day Saints, a temple recommend allows the owner to enter any of our 168 temples around the globe. This small piece of paper means everything to me. It reflects my deep, spiritual intent to live the laws of the Lord and love what He loves: humility, meekness, steadfastness, charity, courage, compassion, forgiveness, and obedience.</p>
+                    <p class="mb-4">To qualify for the honor of a temple recommend, members of the Church must live in harmony with the teachings of The Church of Jesus Christ of Latter-day Saints. In a temple recommend interview with a local Church leader, those seeking to attend the temple have the opportunity to search their souls about their personal faith in Jesus Christ and His Atonement.</p>
+                    <p class="mb-4">We have been experiencing a time when temples have been closed or limited in use due to COVID-19. Being worthy to attend the temple, however, has not been suspended. Let me emphasize, whether you have access to a temple or not, you need a current temple recommend to stay firmly on the path back to our Heavenly Father.</p>
+                    <p class="mb-4">Dear friends, please do all you can keep your temple recommend current. Every Latter-day Saint temple in the world—all 168 of them—stand as testaments to our faith in eternal life and the joy of spending it with our families and our Heavenly Father.</p>
+                    <footer class="text-sm mt-2">—Ronald A Rasband from Facebook</footer>
+                </div>
+            </div>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What can we learn from Elder Rasband on the importance of a temple recommend?</p>
+        </section>
+
+        <!-- Elder Rasband Image: A supportive visual -->
+        <div class="section-padding flex justify-center">
+            <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Elder+Ronald+A.+Rasband+Holding+Temple+Recommend" alt="Elder Ronald A. Rasband smiling and holding up a temple recommend." class="w-full">
+        </div>
+
+        <!-- Temple Recommend Interview Questions Section: The core questions for worthiness -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Temple Recommend Interview Questions</h3>
+            <p class="text-base md:text-lg text-gray-700 mb-6">These are the questions asked in a temple recommend interview, designed to help members reflect on their commitment to gospel principles:</p>
+            <ul class="list-disc list-inside space-y-3 text-gray-700 text-sm md:text-base">
+                <li>Do you have faith in and a testimony of God, the Eternal Father; His Son, Jesus Christ; and the Holy Ghost?</li>
+                <li>Do you have a testimony of the Atonement of Jesus Christ and of His role as your Savior and Redeemer?</li>
+                <li>Do you have a testimony of the Restoration of the gospel of Jesus Christ?</li>
+                <li>Do you sustain the president of The Church of Jesus Christ of Latter-day Saints as the prophet, seer, and revelator and as the only person on the earth authorized to exercise all priesthood keys? Do you sustain the members of the First Presidency and the Quorum of the Twelve Apostles as prophets, seers, and revelators? Do you sustain the other General Authorities and local leaders of the Church?</li>
+                <li>The Lord has said that all things are to be “done in cleanliness” before Him (Doctrine and Covenants 42:41). Do you strive for moral cleanliness in your thoughts and behavior? Do you obey the law of chastity?</li>
+                <li>Do you follow the teachings of the Church of Jesus Christ in your private and public behavior with members of your family and others?</li>
+                <li>Do you support or promote any teachings, practices, or doctrine contrary to those of The Church of Jesus Christ of Latter-day Saints?</li>
+                <li>Do you strive to keep the Sabbath day holy, both at home and at church; attend your meetings; prepare for and worthily partake of the sacrament; and live your life in harmony with the laws and commandments of the gospel?</li>
+                <li>Do you strive to be honest in all that you do?</li>
+                <li>Are you a full-tithe payer?</li>
+                <li>Do you understand and obey the Word of Wisdom?</li>
+                <li>Do you have any financial or other obligations to a former spouse or to children? If yes, are you current in meeting those obligations?</li>
+                <li>Do you keep the covenants that you made in the temple, including wearing the temple garment as instructed in the endowment?</li>
+                <li>Are there serious sins in your life that need to be resolved with priesthood authorities as part of your repentance?</li>
+                <li>Do you consider yourself worthy to enter the Lord’s house and participate in temple ordinances?</li>
+            </ul>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What questions do you have about these questions?</p>
+            <!-- QR code image (Image 5) is intentionally omitted. -->
+        </section>
+
+        <!-- The Law of Chastity Section: Defining a key principle -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">The Law of Chastity</h3>
+            <p class="mb-4 text-base md:text-lg text-gray-700">Chastity is sexual purity. Those who are chaste are morally clean in their thoughts, words, and actions. Chastity means not having any sexual relations before marriage. It also means complete fidelity to husband or wife during marriage.</p>
+            <footer class="text-sm mt-2 text-gray-600">—Topics and Questions Chastity, <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/chastity?lang=eng" target="_blank" class="text-blue-600 hover:underline font-medium">churchofjesuschrist.org/study/manual/gospel-topics/chastity</a></footer>
+        </section>
+
+        <!-- Image 6: Best Friends Forever - Temple wedding: Visualizing eternal commitment -->
+        <div class="section-padding flex justify-center">
+            <img src="https://placehold.co/1000x1200/3b82f6/ffffff?text=Couple+Married+at+Temple" alt="A joyful couple in wedding attire standing outside a beautiful Latter-day Saint temple." class="w-full">
+        </div>
+
+        <!-- Confidence wax strong in the presence of the Lord Section: The blessings of virtue -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Confidence Wax Strong in the Presence of the Lord</h3>
+            <div class="flex justify-center mb-8">
+                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Couple+Looking+Up+with+Divine+Light" alt="A man and woman looking heavenward with expressions of joy and confidence, bathed in golden light." class="w-full">
+            </div>
+            <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Doctrine and Covenants 121:</h4>
+            <p class="mb-4 text-base md:text-lg text-gray-700">45 Let thy bowels also be full of charity towards all men, and to the household of faith, and let virtue garnish thy thoughts unceasingly; then shall thy confidence wax strong in the presence of God; and the doctrine of the priesthood shall distil upon thy soul as the dews from heaven.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">46 The Holy Ghost shall be thy constant companion, and thy scepter an unchanging scepter of righteousness and truth; and thy dominion shall be an everlasting dominion, and without compulsory means it shall flow unto thee forever and ever.</p>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">Why do you feel that being virtuous helps us to feel confidence?</p>
+            <p class="text-lg md:text-xl font-semibold mb-6 text-gray-800">Why do you think being worthy helps us to better understand the things of the temple?</p>
+
+            <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">President Nelson just spoke on this topic</h4>
+            <blockquote class="text-gray-800">
+                <p>When we make and keep covenants with God, we can have confidence that is born of the Spirit. The Lord told the Prophet Joseph Smith that our confidence can “wax strong in the presence of God.” Imagine the comfort of having confidence in the presence of God!</p>
+                <p>When I speak of having confidence before God, I am referring to having confidence in approaching God right now! I am referring to praying with confidence that Heavenly Father hears us, that He understands our needs better than we do. I am referring to having confidence that He loves us more than we can comprehend, that He sends angels to be with us and with those we love. I am referring to having confidence that He yearns to help each of us reach our highest potential.</p>
+                <p>Now, how do we gain such confidence? The Lord answers this question with these words: “Let thy bowels … be full of charity towards all men, … and let virtue garnish thy thoughts unceasingly; then shall thy confidence wax strong in the presence of God.”</p>
+                <p>There’s the key! In the Lord’s own words, charity and virtue open the way to having confidence before God! Brothers and sisters, we can do this! Our confidence can truly wax strong in the presence of God, right now!</p>
+                <footer>—President Russell M. Nelson, <em>Confidence in the Presence of God</em></footer>
+            </blockquote>
+        </section>
+
+        <!-- President Nelson Image: A respected leader's portrait -->
+        <div class="section-padding flex justify-center">
+            <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=President+Russell+M.+Nelson+Portrait" alt="A smiling portrait of President Russell M. Nelson." class="w-full">
+        </div>
+
+        <!-- Tithing Section: Understanding the law of tithing -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Tithing</h3>
+            <div class="flex justify-center mb-8">
+                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Person+Writing+Tithing+Slip" alt="A person's hands filling out a tithing and offerings slip." class="w-full">
+            </div>
+            <blockquote class="text-gray-800">
+                <p>“Tithing is a principle that is fundamental to the personal happiness and well-being of the Church members worldwide, both rich and poor. Tithing is a principle of sacrifice and a key to the opening of the windows of heaven. … Members of the Church who do not tithe do not lose their membership; they only lose blessings.”</p>
+                <footer>—James E. Faust: <em>Endowed from on high</em></footer>
+            </blockquote>
+            <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Malachi 3:</h4>
+            <p class="mb-2 text-base md:text-lg text-gray-700">8 ¶ Will a man rob God? Yet ye have robbed me. But ye say, Wherein have we robbed thee? In tithes and offerings.</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">9 Ye are cursed with a curse: for ye have robbed me, even this whole nation.</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">10 Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">11 And I will rebuke the devourer for your sakes, and he shall not destroy the fruits of your ground; neither shall your vine cast her fruit before the time in the field, saith the Lord of hosts.</p>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">In what ways have you seen the Lord bless you and others as they paid tithing?</p>
+        </section>
+
+        <!-- The Law of Sacrifice Section: The connection to faith -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">The Law of Sacrifice</h3>
+            <p class="mb-4 text-base md:text-lg text-gray-700">How does sacrifice help us come unto Christ? No one will ever accept the Savior without having faith in Him first. Hence, the first principle of the gospel is faith in the Lord Jesus Christ. Accordingly, the Prophet Joseph Smith (1805–44) explained an important relationship between the principle of faith and the principle of sacrifice:</p>
+            <blockquote class="text-gray-800">
+                <p>“Let us here observe, that a religion that does not require the sacrifice of all things never has power sufficient to produce the faith necessary unto life and salvation; … it is through the medium of the sacrifice of all earthly things that men do actually know that they are doing the things that are well pleasing in the sight of God. When a man has offered in sacrifice all that he has for the truth’s sake, not even withholding his life, and believing before God that he has been called to make this sacrifice because he seeks to do his will, he does know, most assuredly, that God does and will accept his sacrifice and offering, and that he has not, nor will not seek his face in vain. Under these circumstances, then, he can obtain the faith necessary for him to lay hold on eternal life.”</p>
+                <footer>—<em>Lectures on Faith</em> [1985], 69</footer>
+            </blockquote>
+            <footer class="text-sm mt-2 text-gray-600">—The Law of Sacrifice by Elder M Russell Ballard</footer>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/600x750/3b82f6/ffffff?text=Elder+M+Russell+Ballard+Portrait" alt="A portrait of Elder M Russell Ballard." class="w-full md:w-1/2 lg:w-1/3">
+            </div>
+        </section>
+
+        <!-- The Word of Wisdom Section: Principles of health -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">The Word of Wisdom</h3>
+            <ul class="list-disc list-inside space-y-3 text-gray-700 text-base md:text-lg mb-6">
+                <li><strong>Alcoholic drinks</strong> – This includes wine, beer, and hard liquor.</li>
+                <li><strong>Tobacco</strong> – All forms, including cigarettes, cigars, chewing tobacco, and vaping products.</li>
+                <li><strong>Coffee and tea</strong> – Specifically “hot drinks” as referenced in Doctrine and Covenants 89:9, which has been clarified by church leaders to mean coffee and tea (excluding herbal teas).</li>
+                <li><strong>Illegal or harmful drugs</strong> – Including recreational drug use and the misuse of prescription medications.</li>
+            </ul>
+            <footer class="text-sm mt-2 text-gray-600">—D&C 89</footer>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/1000x560/3b82f6/ffffff?text=Word+of+Wisdom+Visual+Summary" alt="A graphic illustrating items prohibited by the Word of Wisdom, such as alcohol, tobacco, coffee, and drugs." class="w-full">
+            </div>
+
+            <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">Historical Background</h4>
+            <blockquote class="text-gray-800">
+                <p>President Brigham Young said: “I think I am as well acquainted with the circumstances which led to the giving of the Word of Wisdom as any man in the Church, although I was not present at the time to witness them. The first school of the prophets was held in a small room situated over the Prophet Joseph’s kitchen, in a house which belonged to Bishop Whitney. … The brethren came to that place for hundreds of miles to attend school in a little room probably no larger than eleven by fourteen. When they assembled together in this room after breakfast, the first they did was to light their pipes and, while smoking, talk about the great things of the kingdom and spit all over the room, and as soon as the pipe was out of their mouths a large chew of tobacco would then be taken. Often when the Prophet entered the room to give the school instructions he would find himself in a cloud of tobacco smoke. This, and the complaints of his wife at having to clean so filthy a floor, made the Prophet think upon the matter, and he inquired of the Lord relating to the conduct of the Elders in using tobacco, and the revelation known as the Word of Wisdom was the result of his inquiry. You know what it is and can read it at your leisure.”</p>
+                <footer>—In <em>Journal of Discourses</em>, 12:158</footer>
+            </blockquote>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/800x500/3b82f6/ffffff?text=Joseph+Smith+and+Emma+Smith+Cleaning" alt="An illustration depicting Prophet Joseph Smith observing Emma Smith cleaning a floor, leading to the revelation of the Word of Wisdom." class="w-full md:w-2/3">
+            </div>
+
+            <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">Why Does the Lord Say “Not by Commandment or Constraint”?</h4>
+            <blockquote class="text-gray-800">
+                <p>“The reason undoubtedly why the Word of Wisdom was given—as not by ‘commandment or restraint’ was that at that time, at least, if it had been given as a commandment it would have brought every man, addicted to the use of these noxious things, under condemnation; so the Lord was merciful and gave them a chance to overcome, before He brought them under the law. Later on, it was announced from this stand, by President Brigham Young that the Word of Wisdom was a revelation and a command of the Lord. [See Young, <em>Discourses of Brigham Young</em>, pp. 183–84].”</p>
+                <footer>—Joseph F. Smith, in <em>Conference Report</em>, Oct. 1913, p. 14</footer>
+            </blockquote>
+
+            <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">Promised Blessings</h4>
+            <h5 class="text-lg md:text-xl font-semibold mb-4 text-gray-800">Doctrine and Covenants 89:</h5>
+            <p class="mb-2 text-base md:text-lg text-gray-700">18 And all saints who remember to keep and do these sayings, walking in obedience to the commandments, shall receive health in their navel and marrow to their bones;</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">19 And shall find wisdom and great treasures of knowledge, even hidden treasures;</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">20 And shall run and not be weary, and shall walk and not faint.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">21 And I, the Lord, give unto them a promise, that the destroying angel shall pass by them, as the children of Israel, and not slay them. Amen.</p>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/800x1000/3b82f6/ffffff?text=Runners+Symbolizing+Health" alt="A man and a woman jogging outdoors, symbolizing the physical blessings of the Word of Wisdom." class="w-full md:w-2/3 lg:w-1/2">
+            </div>
+        </section>
+
+        <!-- The Sabbath Day Section: Honoring the Lord's day -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">The Sabbath Day</h3>
+            <p class="mb-4 text-base md:text-lg text-gray-700">Do you strive to keep the Sabbath day holy, both at home and at church; attend your meetings; prepare for and worthily partake of the sacrament; and live your life in harmony with the laws and commandments of the gospel?</p>
+            <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">D&C 59:</h4>
+            <p class="mb-2 text-base md:text-lg text-gray-700">9 And that thou mayest more fully keep thyself unspotted from the world, thou shalt go to the house of prayer and offer up thy sacraments upon my holy day;</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">10 For verily this is a day appointed unto you to rest from your labors, and to pay thy devotions unto the Most High;</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">11 Nevertheless thy vows shall be offered up in righteousness on all days and at all times;</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">12 But remember that on this, the Lord’s day, thou shalt offer thine oblations and thy sacraments unto the Most High, confessing thy sins unto thy brethren, and before the Lord.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">13 And on this day thou shalt do none other thing, only let thy food be prepared with singleness of heart that thy fasting may be perfect, or, in other words, that thy joy may be full.</p>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+and+Samaritan+Woman+at+Well" alt="Jesus Christ speaking with the Samaritan woman at Jacob's Well." class="w-full">
+            </div>
+
+            <h4 class="text-xl md:text-2xl font-semibold my-6 text-gray-800">List of Do’s and Don’ts?</h4>
+            <blockquote class="text-gray-800">
+                <p>What did the Savior mean when He said that “the sabbath was made for man, and not man for the sabbath”? I believe He wanted us to understand that the Sabbath was His gift to us, granting real respite from the rigors of daily life and an opportunity for spiritual and physical renewal. God gave us this special day, not for amusement or daily labor but for a rest from duty, with physical and spiritual relief.</p>
+                <p>How do we hallow the Sabbath day? In my much younger years, I studied the work of others who had compiled lists of things to do and things not to do on the Sabbath. It wasn’t until later that I learned from the scriptures that my conduct and my attitude on the Sabbath constituted a sign between me and my Heavenly Father. With that understanding, I no longer needed lists of dos and don’ts. When I had a decision to make whether or not an activity was appropriate for the Sabbath, I simply asked myself, “What sign do I want to give to God?” That question made my choices about the Sabbath day crystal clear.</p>
+                <footer>—President Nelson, <em>The Sabbath is a Delight</em></footer>
+            </blockquote>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+Teaching+an+Elderly+Man" alt="Jesus Christ sitting and teaching an elderly man." class="w-full">
+            </div>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What can you do to make the Sabbath more of a delight?</p>
+
+            <!-- LLM Feature: Sabbath Delight Ideas -->
+            <div class="mt-8 p-6 bg-blue-50 rounded-lg shadow-inner">
+                <h4 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">✨ Get Sabbath Delight Ideas ✨</h4>
+                <p class="text-base md:text-lg text-gray-700 mb-4">Describe your current Sabbath activities or preferences, and I'll suggest ways to make it more delightful for you and your family.</p>
+                <textarea id="sabbathInput" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base" rows="4" placeholder="E.g., 'I enjoy quiet reflection and reading scriptures, but my kids get bored.' or 'I want to feel more spiritually uplifted.'"></textarea>
+                <button id="generateSabbathIdeasBtn" class="llm-button mt-4">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path></svg>
+                    Generate Ideas
+                    <span id="sabbathSpinner" class="spinner hidden"></span>
+                </button>
+                <div id="sabbathOutput" class="mt-6 p-4 bg-white border border-blue-200 rounded-lg text-gray-800 text-base">
+                    Your personalized Sabbath delight ideas will appear here.
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Section: A call to personal introspection -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Reflection</h3>
+            <h4 class="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Psalm 24:</h4>
+            <p class="mb-2 text-base md:text-lg text-gray-700">3 Who shall ascend into the hill of the Lord? or who shall stand in his holy place?</p>
+            <p class="mb-2 text-base md:text-lg text-gray-700">4 He that hath clean hands, and a pure heart; who hath not lifted up his soul unto vanity, nor sworn deceitfully.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">5 He shall receive the blessing from the Lord, and righteousness from the God of his salvation.</p>
+            <div class="flex justify-center mt-8">
+                <img src="https://placehold.co/1000x600/3b82f6/ffffff?text=Jesus+Walking+on+Water+Reflection" alt="Jesus Christ walking on the surface of the water, looking down in contemplation." class="w-full">
+            </div>
+            <p class="mt-8 text-lg md:text-xl font-semibold text-gray-800">What does it mean to you to be worthy to enter the temple?</p>
+            <p class="text-lg md:text-xl font-semibold text-gray-800">What blessing can you expect as you strive to live worthy of a temple recommend?</p>
+
+            <!-- LLM Feature: Temple Worthiness Reflection -->
+            <div class="mt-8 p-6 bg-indigo-50 rounded-lg shadow-inner">
+                <h4 class="text-xl md:text-2xl font-bold text-indigo-800 mb-4">✨ Reflect with Gemini ✨</h4>
+                <p class="text-base md:text-lg text-gray-700 mb-4">Share your thoughts on what it means to be worthy to enter the temple, and I'll offer an encouraging reflection.</p>
+                <textarea id="worthinessInput" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base" rows="6" placeholder="E.g., 'For me, worthiness means striving to live righteously and always trying to repent.' or 'I feel it's about my heart and intentions.'"></textarea>
+                <button id="generateWorthinessReflectionBtn" class="llm-button mt-4 bg-indigo-600 hover:bg-indigo-700">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path></svg>
+                    Get Reflection
+                    <span id="worthinessSpinner" class="spinner hidden"></span>
+                </button>
+                <div id="worthinessOutput" class="mt-6 p-4 bg-white border border-indigo-200 rounded-lg text-gray-800 text-base">
+                    Your personalized reflection will appear here.
+                </div>
+            </div>
+        </section>
+
+        <!-- Q&A Section: Inviting further questions -->
+        <section class="section-padding border-b border-gray-200">
+            <h3 class="text-3xl">Q&A</h3>
+            <p class="mb-2 text-lg md:text-xl font-semibold text-gray-800">What questions do you have about preparing to enter the temple?</p>
+            <p class="text-lg md:text-xl font-semibold text-gray-800">(Not a confession time)</p>
+            <!-- Images 17 and 18 (QR code and abstract brush strokes) are omitted. -->
+        </section>
+
+        <!-- Your Repentance Doesn’t Burden Jesus Christ; It Brightens His Joy Section: A message of hope -->
+        <section class="section-padding pb-10">
+            <h3 class="text-3xl">Your Repentance Doesn’t Burden Jesus Christ; It Brightens His Joy</h3>
+            <footer class="text-sm mt-2 mb-6 text-gray-600">—Sister Tamara W. Runia</footer>
+            <p class="mb-4 text-base md:text-lg text-gray-700">So when the Lord says, “Repent ye, repent ye,” what if you imagined Him saying, “I love you. I love you.” Picture Him pleading with you to leave behind the behavior causing you pain, inviting you to step out of darkness and turn to His light.</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">Yes, your repentance doesn’t burden Jesus Christ; it brightens His joy!</p>
+            <p class="mb-4 text-base md:text-lg text-gray-700">Your worth isn’t tied to obedience. Your worth is constant; it never changes. It was given to you by God, and there’s nothing you or anyone else can do to change it. Obedience brings blessings; that is true. But worth isn’t one of them. Your worth is always “great in the sight of God,” no matter where your decisions have taken you.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Man+1" alt="Jesus Christ gently comforting a man, embracing him with compassion." class="w-full">
+                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Woman" alt="Jesus Christ tenderly comforting a woman, holding her close." class="w-full">
+                <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Jesus+Comforting+Man+2" alt="Jesus Christ kneeling to comfort another man, offering solace." class="w-full">
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Function to call the Gemini API
+        async function callGeminiAPI(prompt, outputElementId, spinnerElementId) {
+            const outputDiv = document.getElementById(outputElementId);
+            const spinner = document.getElementById(spinnerElementId);
+
+            outputDiv.innerHTML = ''; // Clear previous output
+            spinner.classList.remove('hidden'); // Show spinner
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will automatically provide the API key at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputDiv.innerHTML = text.replace(/\n/g, '<br>'); // Display response, convert newlines to <br>
+                } else {
+                    outputDiv.innerHTML = 'Sorry, I could not generate a response. Please try again.';
+                    console.error('Gemini API response structure unexpected:', result);
+                }
+            } catch (error) {
+                outputDiv.innerHTML = 'An error occurred while connecting to the API. Please try again later.';
+                console.error('Error calling Gemini API:', error);
+            } finally {
+                spinner.classList.add('hidden'); // Hide spinner
+            }
+        }
+
+        // Event Listener for Sabbath Delight Ideas button
+        document.getElementById('generateSabbathIdeasBtn').addEventListener('click', () => {
+            const sabbathInput = document.getElementById('sabbathInput').value;
+            if (sabbathInput.trim() === '') {
+                document.getElementById('sabbathOutput').innerHTML = 'Please describe your Sabbath activities or preferences to get ideas.';
+                return;
+            }
+            const prompt = `Given the user's preferences: "${sabbathInput}", suggest 3-5 specific, uplifting, and appropriate activities or approaches to make the Sabbath day more of a delight, aligning with principles of rest, worship, and spiritual renewal. Focus on practical, family-friendly, or personal enrichment ideas.`;
+            callGeminiAPI(prompt, 'sabbathOutput', 'sabbathSpinner');
+        });
+
+        // Event Listener for Temple Worthiness Reflection button
+        document.getElementById('generateWorthinessReflectionBtn').addEventListener('click', () => {
+            const worthinessInput = document.getElementById('worthinessInput').value;
+            if (worthinessInput.trim() === '') {
+                document.getElementById('worthinessOutput').innerHTML = 'Please share your thoughts on worthiness to receive a reflection.';
+                return;
+            }
+            const prompt = `The user has shared their thoughts on temple worthiness: "${worthinessInput}". Provide an encouraging and uplifting reflection (2-3 sentences) that acknowledges their effort and reinforces the divine perspective on worthiness, emphasizing growth and God's love.`;
+            callGeminiAPI(prompt, 'worthinessOutput', 'worthinessSpinner');
+        });
+    </script>
+</body>
+</html>
